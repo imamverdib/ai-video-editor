@@ -1,0 +1,13 @@
+# Silero VAD stack. Install this INSTEAD of requirements.txt for the most
+# precise speech boundaries:
+#
+#     pip install -r requirements-vad.txt
+#
+# Requires a Python version with PyTorch wheels (3.10 - 3.13 at time of
+# writing). Without it the app automatically falls back to the built-in
+# energy-based VAD in app/audio_processing.py.
+-r requirements.txt
+
+torch>=2.2
+torchaudio>=2.2
+silero-vad>=5.1

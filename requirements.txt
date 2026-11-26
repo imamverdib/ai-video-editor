@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------- web backend
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3
+python-dotenv>=1.0
+
+# ------------------------------------------------------------- external APIs
+groq>=0.11
+httpx>=0.27
+# Optional: only needed when NORMALIZER_PROVIDER=anthropic
+anthropic>=0.39
+
+# ------------------------------------------------------- audio / subtitles
+numpy>=1.26
+soundfile>=0.12
+Pillow>=10.3

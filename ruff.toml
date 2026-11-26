@@ -1,0 +1,15 @@
+line-length = 100
+target-version = "py310"
+
+[lint]
+select = ["F", "E", "W", "I", "UP", "B", "SIM", "ARG", "C4", "RET", "PTH"]
+ignore = [
+  # FastAPI's dependency-injection idiom *requires* calls in argument defaults.
+  "B008",
+  # Explicit `Path(...)` conversions read better than PTH's suggestions in a
+  # few ffmpeg-argument sites.
+  "PTH123",
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["ARG001", "S101"]
